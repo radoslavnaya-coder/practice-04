@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="slider.scss" />
+    <title>EKA тур</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img style="padding-right: 63.8vw" src="img/logo.png" />
+        <h3>+8(999)000-00-00</h3>
+      </nav>
+      <br />
+      <nav>
+        <h2>Туры</h2>
+        <h2>Заказать</h2>
+        <h2>Отзывы</h2>
+        <h2 style="padding-right: 31.6vw">FAQ</h2>
+        <img src="img/whatsapp.png" style="padding-right: 20px" />
+        <img src="img/telegram.png" />
+      </nav>
+      <img class="header_banner" src="img/banner1.jpg" />
+    </header>
+    <main>
+      <h1>Туры</h1>
+      <!-- slider -->
+      <div class="items">
+        <div class="item active">
+          <img src="img/town-img.png" />
+          <p>Знакомство с городом</p>
+          <h4>Посетить главные достопримечательности города и узнать об 
+            уральской жизни, истории и природе</h4>
+            <img src="img/stars.png">
+            <h4>памятники</h4>
+            <h4>архитектура</h4>
+            <h4>город</h4>
+            <h4>6 часов</h4>
+            <h4>гид</h4>
+            <h4>750р за человека</h4>
+        </div>
+        <div class="item next">
+          <img src="img/rock-img.png" />
+          <p>Знакомство с городом</p>
+          <h4>Посетить главные достопримечательности города и узнать об 
+            уральской жизни, истории и природе</h4>
+            <img src="img/stars.png">
+            <h4>памятники</h4>
+            <h4>архитектура</h4>
+            <h4>город</h4>
+            <h4>6 часов</h4>
+            <h4>гид</h4>
+            <h4>750р за человека</h4>
+        </div>   
+        <div class="item prev">
+          <img src="img/food-img.png" />
+          <p>Знакомство с городом</p>
+          <h4>Посетить главные достопримечательности города и узнать об 
+            уральской жизни, истории и природе</h4>
+            <img src="img/stars.png">
+            <h4>памятники</h4>
+            <h4>архитектура</h4>
+            <h4>город</h4>
+            <h4>6 часов</h4>
+            <h4>гид</h4>
+            <h4>750р за человека</h4>
+        </div>
+        <div class="button-container">
+          <div class="button"><i class="fas fa-angle-left"><img src="img/line-left.png"></i></div>
+          <div class="button"><i class="fas fa-angle-right"><img src="img/line-right.png"></i></div>
+        </div>
+      </div>
+      <!-- end slider -->
+      <form action="">
+        <label for=""> </label>
+        <input type="text" />
+      </form>
+    </main>
+    <!--  -->
+    <script>
+      // I will be creating a different pen with touch support but right 
+      // now I have no time for it due to school
+      const slider = document.querySelector(".items");
+      const slides = document.querySelectorAll(".item");
+      const button = document.querySelectorAll(".button");
+
+      let current = 0;
+      let prev = 2;
+      let next = 1;
+
+      for (let i = 0; i < button.length; i++) {
+        button[i].addEventListener("click", () =>
+          i == 0 ? gotoPrev() : gotoNext()
+        );
+      }
+
+      const gotoPrev = () =>
+        current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+      const gotoNext = () => (current < 2 ? gotoNum(current + 1) : gotoNum(0));
+
+      const gotoNum = (number) => {
+        current = number;
+        prev = current - 1;
+        next = current + 1;
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+          slides[i].classList.remove("prev");
+          slides[i].classList.remove("next");
+        }
+
+        if (next == 3) {
+          next = 0;
+        }
+
+        if (prev == -1) {
+          prev = 2;
+        }
+
+        slides[current].classList.add("active");
+        slides[prev].classList.add("prev");
+        slides[next].classList.add("next");
+      };
+    </script>
+  </body>
+</html>

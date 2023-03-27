@@ -45,6 +45,13 @@ nav h2 {
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(35px);
+    border-radius: 30px;
+    padding: 2.5vh 2.5vw;
+}
+
+.slider-image{
+    width: 24vw;
+    height: 53vh;
 }
 
 .items .item {
@@ -52,19 +59,19 @@ nav h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 29vw;/*540px*/
-  height: 132vh;/*883px*/
+  width: 24vw;/*540px*/
+  height: 127vh;/*883px*/
   overflow: hidden;
   transition: all 300ms ease-in-out;
   z-index: -1;
   opacity: 0;
 }
 
-.item img {
+/* .item img {
   width: 30%;
   height: 30%; 
   object-fit: cover;
-}
+} */
 
 .item.active {
   opacity: 1;
@@ -89,7 +96,7 @@ nav h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 275px;
+  width: 80vw;
   z-index: 100;
 }
 
@@ -112,9 +119,10 @@ nav h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 1);
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(35px);
   border-radius: 50%;
   z-index: -99;
 }
@@ -129,10 +137,7 @@ nav h2 {
 /*end slider*/
 
 .line {
-  width: 0.7%;
-  height: 2%;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 60px;
-  padding: 20px;
-  backdrop-filter: blur(35px);
+    margin-left: 20%;
+    margin-bottom: 10%;
+    width: 7px;
 }

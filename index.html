@@ -1,3 +1,5 @@
+<!-- нужно поменять фамилию слайдера -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,85 +7,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="slider.scss" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>EKA тур</title>
   </head>
-
   <body>
     <header>
       <nav>
-        <img style="padding-right: 63.8vw" src="img/logo.png" />
-        <h3>+8(999)000-00-00</h3>
+        <img class="logo" src="img/logo.png" />
+        <h3 style="font-weight: 400">+8(999)000-00-00</h3>
       </nav>
       <br />
       <nav>
         <h2>Туры</h2>
         <h2>Заказать</h2>
         <h2>Отзывы</h2>
-        <h2 style="padding-right: 31.6vw">FAQ</h2>
-        <img src="img/whatsapp.png" style="padding-right: 20px" />
-        <img src="img/telegram.png" />
+        <h2 style="padding-right: 33.6vw">FAQ</h2>
+        <img src="img/whatsapp.png" style="padding-right: 15px; height: 30px" />
+        <img src="img/telegram.png" style="height: 32px" />
       </nav>
       <img class="header_banner" src="img/banner1.jpg" />
     </header>
     <main>
-      <h1>Туры</h1>
+      <h1 style="padding-top: 4.5vh">Туры</h1>
       <!-- slider -->
       <div class="items">
         <div class="item active">
           <img class="slider-image" src="img/town-img.png" />
-          <p>Знакомство с городом</p>
-          <h4>Посетить главные достопримечательности города и узнать об 
-            уральской жизни, истории и природе</h4>
-            <img src="img/stars.png">
+          <p class="item-text-h1">Знакомство с городом</p>
+          <h4 style="font-weight: 400;">
+            Посетить главные достопримечательности города и узнать об уральской
+            жизни, истории и природе
+          </h4>
+          <img src="img/stars.png" />
+          <div class="item-points">
             <h4>памятники</h4>
             <h4>архитектура</h4>
             <h4>город</h4>
             <h4>6 часов</h4>
             <h4>гид</h4>
-            <h4>750р за человека</h4>
+          </div>
+          <a href=""><h4 class="item-button">750р за человека</h4></a>
         </div>
         <div class="item next">
           <img class="slider-image" src="img/rock-img.png" />
-          <p>Знакомство с городом</p>
-          <h4>Посетить главные достопримечательности города и узнать об 
-            уральской жизни, истории и природе</h4>
-            <img src="img/stars.png">
+          <p class="item-text-h1">Знакомство с городом</p>
+          <h4 style="font-weight: 400;">
+            Посетить главные достопримечательности города и узнать об уральской
+            жизни, истории и природе
+          </h4>
+          <img src="img/stars.png" />
+          <div class="item-points">
             <h4>памятники</h4>
             <h4>архитектура</h4>
             <h4>город</h4>
             <h4>6 часов</h4>
             <h4>гид</h4>
-            <h4>750р за человека</h4>
-        </div>   
+          </div>
+          <a href=""><h4 class="item-button">750р за человека</h4></a>
+        </div>
         <div class="item prev">
           <img class="slider-image" src="img/food-img.png" />
-          <p>Знакомство с городом</p>
-          <h4>Посетить главные достопримечательности города и узнать об 
-            уральской жизни, истории и природе</h4>
-            <img src="img/stars.png">
+          <p class="item-text-h1">Знакомство с городом</p>
+          <h4 style="font-weight: 400;">
+            Посетить главные достопримечательности города и узнать об уральской
+            жизни, истории и природе
+          </h4>
+          <img src="img/stars.png" />
+          <div class="item-points">
             <h4>памятники</h4>
             <h4>архитектура</h4>
             <h4>город</h4>
             <h4>6 часов</h4>
             <h4>гид</h4>
-            <h4>750р за человека</h4>
+          </div>
+          <a href=""><h4 class="item-button">750р за человека</h4></a>
         </div>
         <div class="button-container">
-          <div class="button"><i class="fas fa-angle-left"><img src="img/line-left.png" class="line"></i></div>
-          <div class="button"><i class="fas fa-angle-right"><img src="img/line-right.png" class="line"></i></div>
+          <div class="button">
+            <i class="fas fa-angle-left"
+              ><img src="img/line-left.png" class="line"
+            /></i>
+          </div>
+          <div class="button">
+            <i class="fas fa-angle-right"
+              ><img src="img/line-right.png" class="line"
+            /></i>
+          </div>
         </div>
       </div>
       <!-- end slider -->
-      <form action="">
+      <!-- <form action="">
         <label for=""> </label>
         <input type="text" />
-      </form>
+      </form> -->
     </main>
     <!--  -->
     <script>
-      // I will be creating a different pen with touch support but right 
-      // now I have no time for it due to school
       const slider = document.querySelector(".items");
       const slides = document.querySelectorAll(".item");
       const button = document.querySelectorAll(".button");

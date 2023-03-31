@@ -5,35 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>EKA тур</title>
   </head>
 
   <body>
     <header>
+      <div class="navbar">
+        <div class="container nav-container">
+          <input style="margin: 0;" class="checkbox" type="checkbox" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <img
+            style="width: 99px; height: 21px; padding: 1.5vh 35vw"
+            src="img/logo.png"
+          />
+          <div class="menu-items">
+            <a href="#tours"><h2>Туры</h2></a>
+            <a href="#forms"><h2>Заказать</h2></a>
+            <a href="#reviews"><h2>Отзывы</h2></a>
+            <a href="#faq"><h2 class="nav__faq">FAQ</h2></a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="burger-menu">
+        <img style="padding: 2vh 4vw; width: 18px; height: 10px;" src="img/burger-menu.png">
+        
+      </div> -->
       <nav>
         <img class="logo" src="img/logo.png" />
         <h3 style="font-weight: 400">+8(999)000-00-00</h3>
       </nav>
-      <br />
       <nav>
-        <h2>Туры</h2>
-        <h2>Заказать</h2>
-        <h2>Отзывы</h2>
-        <h2 style="padding-right: 33.6vw">FAQ</h2>
+        <a href="#tours"><h2>Туры</h2></a>
+        <a href="#forms"><h2>Заказать</h2></a>
+        <a href="#reviews"><h2>Отзывы</h2></a>
+        <a href="#faq"><h2 class="nav__faq">FAQ</h2></a>
         <img src="img/whatsapp.png" style="padding-right: 15px; height: 30px" />
         <img src="img/telegram.png" style="height: 32px" />
       </nav>
       <img class="header_banner" src="img/banner1.jpg" />
     </header>
     <main>
-      <h1 style="padding-top: 4.5vh">Туры</h1>
+      <h1 style="padding-top: 4.5vh" id="tours">Туры</h1>
       <!-- slider -->
       <div class="items">
         <div class="item active">
           <img class="slider-image" src="img/town-img.png" />
           <p class="item-text-h1">Знакомство с городом</p>
-          <h4 style="font-weight: 400; margin: 0;">
+          <h4 style="font-weight: 400; margin: 0">
             Посетить главные достопримечательности города и узнать об уральской
             жизни, истории и природе
           </h4>
@@ -52,7 +78,7 @@
         <div class="item next">
           <img class="slider-image" src="img/rock-img.png" />
           <p class="item-text-h1">Знакомство с городом</p>
-          <h4 style="font-weight: 400; margin: 0;">
+          <h4 style="font-weight: 400; margin: 0">
             Посетить главные достопримечательности города и узнать об уральской
             жизни, истории и природе
           </h4>
@@ -71,7 +97,7 @@
         <div class="item prev">
           <img class="slider-image" src="img/food-img.png" />
           <p class="item-text-h1">Знакомство с городом</p>
-          <h4 style="font-weight: 400; margin: 0;">
+          <h4 style="font-weight: 400; margin: 0">
             Посетить главные достопримечательности города и узнать об уральской
             жизни, истории и природе
           </h4>
@@ -84,55 +110,108 @@
             <h4>гид</h4>
           </div>
           <a href="">
-            <h4 class="item-button">750р за человека</h4>
+            <h4 class="item-button" id="forms">750р за человека</h4>
           </a>
         </div>
         <div class="button-container">
           <div class="button">
             <i class="fas fa-angle-left"
-              ><img src="img/line-left.png" class="line"
+              ><img src="img/line-left.png" class="liner"
             /></i>
           </div>
           <div class="button">
             <i class="fas fa-angle-right"
-              ><img src="img/line-right.png" class="line"
+              ><img src="img/line-right.png" class="liner"
             /></i>
           </div>
         </div>
       </div>
       <!-- end slider -->
-      
     </main>
     <section class="forms">
       <form action="">
         <label for="">Ваше имя</label><br />
-        <input type="text" /><br />
+        <input type="text" placeholder="Как к вам обращаться?" /><br />
         <label for="">Интересующий тур</label><br />
-        <input type="text" /><br />
+        <input type="text" placeholder="Ваш тур" /><br />
         <label for="">Сколько человек едет</label><br />
-        <input type="text" /><br />
-        <label for="">На какой день</label><br />
-        <input type="text" /><br />
-        <button>Заказать тур</button>
+        <input
+          type="text"
+          placeholder="Сколько людей в вашей группе/семье?"
+        /><br />
+        <button id="reviews">Заказать тур</button>
       </form>
     </section>
     <section class="reviews">
-      <h1 style="padding-top: 8vh">Отзывы</h1>
+      <h1>Отзывы</h1>
 
       <p>Очень гостиприимный город</p>
-      <img src="img/stars.png" alt="">
-      <h4>Мы ездили в Екатеринбург в конце мая, погода была ветренная, поэтому мы выбрали архитектурно-гастрономический тур. Гид Евгения очень приветливая девушка, рассказала и показала нам об особенностях уральской кухни и показала красивые исторические здания где мы пообедали и познакомились с местной кухней. Благодаря вашему сервису мы получили много положительных эмоций от поездки. В следующий раз закажем другой тур, когда поедем туда снова.</h4>
+      <img src="img/stars.png" alt="" />
+      <h4>
+        Мы ездили в Екатеринбург в конце мая, погода была ветренная, поэтому мы
+        выбрали архитектурно-гастрономический тур. Гид Евгения очень приветливая
+        девушка, рассказала и показала нам об особенностях уральской кухни и
+        показала красивые исторические здания где мы пообедали и познакомились с
+        местной кухней. Благодаря вашему сервису мы получили много положительных
+        эмоций от поездки. В следующий раз закажем другой тур, когда поедем туда
+        снова.
+      </h4>
       <p>Мастер-класс</p>
-      <img src="img/stars.png" alt="">
-      <h4>Заказывали мастер-класс где нам показывали минералы и рассказывали как их обрабатывать. Ставлю четыре звезды, потому-что хотелось бы после мастер-класса также посмотреть на минералы достопримечательности</h4>
+      <img src="img/stars.png" alt="" />
+      <h4>
+        Заказывали мастер-класс где нам показывали минералы и рассказывали как
+        их обрабатывать. Ставлю четыре звезды, потому-что хотелось бы после
+        мастер-класса также посмотреть на минералы достопримечательности
+      </h4>
       <p>Очень гостиприимный город</p>
-      <img src="img/stars.png" alt="">
-      <h4>Мы ездили в Екатеринбург в конце мая, погода была ветренная, поэтому мы выбрали архитектурно-гастрономический тур. Гид Евгения очень приветливая девушка, рассказала и показала нам об особенностях уральской кухни и показала красивые исторические здания где мы пообедали и познакомились с местной кухней. Благодаря вашему сервису мы получили много положительных эмоций от поездки. В следующий раз закажем другой тур, когда поедем туда снова.</h4>
-      <p>Мастер-класс</p>
-      <img src="img/stars.png" alt="">
-      <h4>Заказывали мастер-класс где нам показывали минералы и рассказывали как их обрабатывать. Ставлю четыре звезды, потому-что хотелось бы после мастер-класса также посмотреть на минералы достопримечательности</h4>
+      <img src="img/stars.png" alt="" />
+      <h4>
+        Мы ездили в Екатеринбург в конце мая, погода была ветренная, поэтому мы
+        выбрали архитектурно-гастрономический тур. Гид Евгения очень приветливая
+        девушка, рассказала и показала нам об особенностях уральской кухни и
+        показала красивые исторические здания где мы пообедали и познакомились с
+        местной кухней. Благодаря вашему сервису мы получили много положительных
+        эмоций от поездки. В следующий раз закажем другой тур, когда поедем туда
+        снова.
+      </h4>
+      <p id="faq">Мастер-класс</p>
+      <img src="img/stars.png" alt="" />
+      <h4>
+        Заказывали мастер-класс где нам показывали минералы и рассказывали как
+        их обрабатывать. Ставлю четыре звезды, потому-что хотелось бы после
+        мастер-класса также посмотреть на минералы достопримечательности
+      </h4>
     </section>
-      
+    <section class="faq">
+      <h1 class="">Ответы на ваши вопросы</h1>
+      <p>Как часто появляются новые туры?</p>
+      <h4>Туры обновляются каждый месяц</h4>
+      <br />
+      <p>Нужно оплачивать всё сразу?</p>
+      <h4>У вас есть возможность оплаты частями</h4>
+      <br />
+      <p>Почему представлено не более трёх туров за раз?</p>
+      <h4>Мы выбираем для вас самые выгодные предложения в трёх категориях</h4>
+      <br />
+    </section>
+    <footer>
+      <div>
+        <img src="img/logo.png" /><br /><br />
+        <img class="footer__whatsapp" src="img/whatsapp.png" />
+        <img src="img/telegram.png" style="height: 32px" />
+      </div>
+      <div>
+        <h3>+8(999)000-00-00</h3>
+        <h3>ekatour@gmail.com</h3>
+      </div>
+      <div class="footer__time">
+        <h3>
+          Часы работы: <br />
+          с 9:00 до 22:00
+        </h3>
+      </div>
+    </footer>
+
     <!--  -->
     <script>
       const slider = document.querySelector(".items");
@@ -178,5 +257,6 @@
         slides[next].classList.add("next");
       };
     </script>
+    <script src="scroll.js"></script>
   </body>
 </html>
